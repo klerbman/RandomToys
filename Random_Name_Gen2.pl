@@ -161,7 +161,7 @@ if(($keep eq "y") or ($keep eq "Y")){
 	$help=1;
 	&Settings;
 	goto KEEP;
-}elsif(($keep ne "n") or ($keep ne "N")or ($keep ne "y")or ($keep ne "Y")){
+}elsif($keep !~ /^[nNyY]$/){
 	print "Type either Y for Yes or N for No as your choice.\n";
 	sleep 3;
 	goto KEEP;
